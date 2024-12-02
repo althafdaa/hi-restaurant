@@ -1,0 +1,1 @@
+export type Stuff = "stuff";

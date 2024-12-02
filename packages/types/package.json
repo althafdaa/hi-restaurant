@@ -6,9 +6,17 @@
   "publishConfig": {
     "access": "public"
   },
+  "exports": {
+    "./model": "./src/model/index.ts",
+    "./common": "./src/common/index.ts"
+  },
   "devDependencies": {
     "@repo/ts-config": "workspace:*",
-    "@repo/database": "workspace:*",
     "typescript": "latest"
+  },
+  "dependencies": {
+    "drizzle-zod": "^0.5.1",
+    "@repo/database": "workspace:*",
+    "zod": "^3.23.8"
   }
 }
