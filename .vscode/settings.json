@@ -1,7 +1,18 @@
 {
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ]
+	"eslint.workingDirectories": [
+		{
+			"mode": "auto"
+		}
+	],
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.codeActions.triggerOnFocusChange": true,
+	// "files.autoSave": "afterDelay",
+	"[json][jsonc][jsonl][javascript][javascriptreact][typescript][typescriptreact][scss]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.codeActionsOnSave": {
+			"quickfix.biome": "always",
+			"source.organizeImports.biome": "always"
+		}
+	}
 }

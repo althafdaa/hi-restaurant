@@ -1,0 +1,14 @@
+{
+  "name": "@repo/types",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@repo/ts-config": "workspace:*",
+    "@repo/database": "workspace:*",
+    "typescript": "latest"
+  }
+}
