@@ -43,7 +43,7 @@ jobs:
             accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
             workingDirectory: apps/admin
             command: |
-                pages deploy dist --project-name=hi-restaurant-admin
+                pages deploy build/client --project-name=hi-restaurant-admin
 
 
 
