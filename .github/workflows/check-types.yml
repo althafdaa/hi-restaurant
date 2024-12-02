@@ -40,4 +40,4 @@ jobs:
       - name: Install deps
         run: pnpm install
       - name: Typechecking
-        run: pnpm ts-lint
+        run: pnpm check-types

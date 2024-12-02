@@ -7,8 +7,8 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".dist/**"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
+    "check-types": {
+      "dependsOn": ["^check-types"]
     },
 
     "dev": {

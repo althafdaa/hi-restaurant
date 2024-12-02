@@ -5,6 +5,7 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "biome check .",
+    "check-types": "turbo check-types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
