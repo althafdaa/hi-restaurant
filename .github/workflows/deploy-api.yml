@@ -3,7 +3,10 @@ name: Deployment
 on:
   push:
     branches:
-      - feat/api
+      - main
+    paths:
+      - 'apps/api/**'
+      - '.github/workflows/deploy-api.yml'
 jobs:
   deploy:
     runs-on: ubuntu-latest
