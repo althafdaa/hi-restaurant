@@ -1,0 +1,1 @@
+{"root":["./react-router.config.ts","./tailwind.config.ts","./vite.config.ts","./app/root.tsx","./app/routes.ts","./app/routes/home.tsx","./app/welcome/welcome.tsx","./.react-router/types/app/+types/root.ts","./.react-router/types/app/routes/+types/home.ts"],"version":"5.7.2"}
