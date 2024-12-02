@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "wrangler pages dev",
+    "check-types": "tsc --noEmit",
     "deploy": "npm run build && wrangler pages deploy"
   },
   "dependencies": {

@@ -1,0 +1,43 @@
+name: Check types
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+    paths-ignore:
+      - '.github/**'
+  pull_request:
+    branches:
+      - master
+      - dev
+    paths-ignore:
+      - '.github/**'
+    types: [opened, synchronize, reopened, ready_for_review] # Don't run if draft
+
+    # Cancel current running
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  check-types:
+    name: Typecheck
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.9.0
+          cache: 'pnpm'
+      - name: Install deps
+        run: pnpm install
+      - name: Typechecking
+        run: pnpm ts-lint
