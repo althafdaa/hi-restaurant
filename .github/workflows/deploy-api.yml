@@ -32,7 +32,7 @@ jobs:
         with:
             apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
             accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-            packageManager: pnpm
             workingDirectory: apps/api
-            # Optional: Enable this if you want to have GitHub Deployments triggered
-            gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+            # # Optional: Enable this if you want to have GitHub Deployments triggered
+            # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
