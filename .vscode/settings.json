@@ -14,5 +14,8 @@
 			"quickfix.biome": "always",
 			"source.organizeImports.biome": "always"
 		}
-	}
+    },
+    "[postcss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
