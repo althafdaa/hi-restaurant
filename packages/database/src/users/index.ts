@@ -11,13 +11,19 @@ export const usersTable = pgTable("users", {
     .default("admin"),
 
   created_by: integer(),
+  last_updated_by: integer(),
   ...defaultTimestamp,
 });
 
 export const usersRelations = relations(usersTable, ({ one, many }) => ({
-  createdBy: one(usersTable, {
+  created_by: one(usersTable, {
     fields: [usersTable.created_by],
     references: [usersTable.id],
     relationName: "created_by",
+  }),
+  last_updated_by: one(usersTable, {
+    fields: [usersTable.last_updated_by],
+    references: [usersTable.id],
+    relationName: "last_updated_by",
   }),
 }));
