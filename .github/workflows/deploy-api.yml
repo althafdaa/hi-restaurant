@@ -1,12 +1,14 @@
-name: Deployment
+name: Deploy API
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
     paths:
       - 'apps/api/**'
       - '.github/workflows/deploy-api.yml'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -40,5 +42,10 @@ jobs:
             accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
             workingDirectory: apps/api
             command: pages deploy dist --project-name=hi-restaurant-api
+            secrets: |
+                JWT_SECRET
+        env:
+            JWT_SECRET: ${{ secrets.JWT_SECRET }}
+
 
 
