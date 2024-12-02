@@ -10,13 +10,13 @@
     "./schema": "./src/schema.ts"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "drizzle-orm": "^0.36.4",
     "pg": "^8.13.1"
   },
   "devDependencies": {
     "@repo/ts-config": "workspace:*",
     "@types/pg": "^8.11.10",
-    "drizzle-kit": "^0.28.1",
-    "tsx": "^4.19.2"
+    "drizzle-kit": "^0.28.1"
   }
 }

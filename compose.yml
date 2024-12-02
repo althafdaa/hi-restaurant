@@ -9,5 +9,5 @@ services:
       - ~/apps/postgres:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=password
-      - POSTGRES_USER=hirestaurant
-      - POSTGRES_DB=psotgres
+      - POSTGRES_USER=user
+      - POSTGRES_DB=postgres
