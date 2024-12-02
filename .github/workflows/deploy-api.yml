@@ -33,6 +33,7 @@ jobs:
             apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
             accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
             packageManager: pnpm
-            command: pages deploy apps/api/dist --project-name=hi-res-api
+            workingDirectory: apps/api
+            command: pages deploy ./dist --project-name=hi-res-api
             # Optional: Enable this if you want to have GitHub Deployments triggered
             gitHubToken: ${{ secrets.GITHUB_TOKEN }}
