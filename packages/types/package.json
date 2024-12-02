@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "drizzle-zod": "^0.5.1",
-    "@repo/database": "workspace:*",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@repo/database": "workspace:*"
   }
 }

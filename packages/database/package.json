@@ -7,12 +7,21 @@
     "access": "public"
   },
   "exports": {
-    "./schema": "./src/schema.ts"
+    "./schema": {
+      "import": "./src/schema.ts",
+      "require": "./dist/schema.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.36.4",
-    "pg": "^8.13.1"
+    "pg": "^8.13.1",
+    "drizzle-zod": "^0.5.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@repo/ts-config": "workspace:*",

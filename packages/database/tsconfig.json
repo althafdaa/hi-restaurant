@@ -1,11 +1,12 @@
 {
   "extends": "@repo/ts-config/base.json",
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
+  "include": ["src"],
+  "exclude": ["node_modules", "drizzle.config.ts", "dist"],
   "compilerOptions": {
     "paths": {
       "~/*": ["./src/*"]
     },
-    "baseUrl": "."
+    "baseUrl": ".",
+    "outDir": "dist"
   }
 }
