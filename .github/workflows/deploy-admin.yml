@@ -1,4 +1,4 @@
-name: Deploy API
+name: Deploy Admin
 
 on:
   workflow_dispatch:
@@ -6,8 +6,8 @@ on:
     branches:
       - main
     paths:
-      - 'apps/api/**'
-      - '.github/workflows/deploy-api.yml'
+      - 'apps/admin/**'
+      - '.github/workflows/deploy-admin.yml'
       - 'pnpm-lock.yaml'
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: apps/api
+        working-directory: apps/admin
     permissions:
       contents: read
       deployments: write
@@ -41,9 +41,9 @@ jobs:
         with:
             apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
             accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-            workingDirectory: apps/api
+            workingDirectory: apps/admin
             command: |
-                pages deploy dist --project-name=hi-restaurant-api
+                pages deploy dist --project-name=hi-restaurant-admin
 
 
 
