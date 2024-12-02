@@ -41,9 +41,9 @@ jobs:
             apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
             accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
             workingDirectory: apps/api
-            command: pages deploy dist --project-name=hi-restaurant-api
-            secrets: |
-                JWT_SECRET
+            command: |
+                pages deploy dist --project-name=hi-restaurant-api
+                pages secret put JWT_SECRET
         env:
             JWT_SECRET: ${{ secrets.JWT_SECRET }}
 
