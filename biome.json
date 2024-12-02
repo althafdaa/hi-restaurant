@@ -7,7 +7,14 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["**/drizzle", "**/build", "**/dist", ".vscode", "**/.turbo"]
+    "ignore": [
+      "**/drizzle",
+      "**/build",
+      "**/dist",
+      ".vscode",
+      "**/.turbo",
+      "**/.react-router"
+    ]
   },
   "formatter": {
     "enabled": true,
