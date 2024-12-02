@@ -3,16 +3,10 @@ name: Check types
 on:
   push:
     branches:
-      - master
-      - dev
-    paths-ignore:
-      - '.github/**'
+      - main
   pull_request:
     branches:
-      - master
-      - dev
-    paths-ignore:
-      - '.github/**'
+      - main
     types: [opened, synchronize, reopened, ready_for_review] # Don't run if draft
 
     # Cancel current running
