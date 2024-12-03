@@ -84,6 +84,9 @@ importers:
       '@repo/database':
         specifier: workspace:*
         version: link:../../packages/database
+      '@repo/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       hono:
         specifier: ^4.6.12
         version: 4.6.12
@@ -97,6 +100,9 @@ importers:
       '@hono/vite-dev-server':
         specifier: ^0.16.0
         version: 0.16.0(hono@4.6.12)(miniflare@3.20241106.1)(wrangler@3.91.0(@cloudflare/workers-types@4.20241127.0))
+      '@types/node':
+        specifier: ^20
+        version: 20.17.9
       vite:
         specifier: ^5.2.12
         version: 5.4.11(@types/node@20.17.9)
