@@ -7,8 +7,22 @@
     "access": "public"
   },
   "exports": {
-    "./model": "./src/model/index.ts",
-    "./common": "./src/common/index.ts"
+    "./model": {
+      "types": "./src/model/index.ts",
+      "require": "./dist/model/index.js"
+    },
+    "./common": {
+      "types": "./src/common/index.ts",
+      "require": "./dist/common/index.js"
+    },
+    "./dto": {
+      "types": "./src/dto/index.ts",
+      "require": "./dist/dto/index.js"
+    }
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "build": "tsc"
   },
   "devDependencies": {
     "@repo/ts-config": "workspace:*",
@@ -16,7 +30,7 @@
   },
   "dependencies": {
     "drizzle-zod": "^0.5.1",
-    "@repo/database": "workspace:*",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@repo/database": "workspace:*"
   }
 }
