@@ -13,9 +13,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: apps/admin
+
     permissions:
       contents: read
       deployments: write
@@ -35,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: pnpm build
+        run: pnpm build --filter=admin
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
